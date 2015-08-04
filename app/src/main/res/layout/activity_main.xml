@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <!-- The main content view -->
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/rootLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+        <!-- Toolbar instead of ActionBar so the drawer can slide on top -->
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/abc_action_bar_default_height_material"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"/>
+
+        <!-- Real content goes here -->
+        <FrameLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            >
+            <ListView android:id="@+id/twitterList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawSelectorOnTop="false"/>
+        </FrameLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher"
+            app:elevation="4dp"
+            app:borderWidth="0dp"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="@dimen/fab_margin_bottom"
+            android:layout_marginRight="@dimen/fab_margin_right"
+            />
+
+        </android.support.design.widget.CoordinatorLayout>
+
+    </LinearLayout>

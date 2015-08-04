@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jli.materialtwitter" >
+
+    <application
+        android:allowBackup="true"
+        android:name="com.jli.materialtwitter.base.BaseApplication"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <activity
+            android:name="com.jli.materialtwitter.LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.jli.materialtwitter.MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="570cff43f925374d662508f4c78c13c2cf0ffcdd" />
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+</manifest>
